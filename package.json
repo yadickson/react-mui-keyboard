@@ -1,9 +1,9 @@
 {
-  "name": "@autosys/react-mui-keyboard",
-  "version": "1.3.1",
+  "name": "@yadickson/react-mui-keyboard",
+  "version": "1.4.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autonomous-systems/react-mui-keyboard.git"
+    "url": "git+https://github.com/yadickson/react-mui-keyboard.git"
   },
   "license": "MIT",
   "author": {
@@ -16,15 +16,16 @@
     "@emotion/styled": "11.11.0",
     "@mui/base": "^5.0.0-beta.14",
     "@mui/icons-material": "5.14.8",
-    "@mui/material": "5.14.8"
+    "@mui/material": "5.14.8",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
-    "clean": "rm -rf dist/",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs",
+    "clean": "rimraf dist/",
+    "build": "npm run clean && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "test": "jest",
-    "prepare": "yarn build"
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "@types/react": "^17.0.0 || ^18.0.0",
