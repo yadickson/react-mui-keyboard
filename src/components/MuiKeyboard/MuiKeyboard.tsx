@@ -49,7 +49,7 @@ export const MuiKeyboard: React.FC<MuiProps> = ({
   numbersRows,
   allKeyboardStyle,
   timeout,
-}): JSX.Element => {
+}): React.JSX.Element => {
   const handleKeyPress = (key: string) => {
     if (key === 'backspace') {
       setInputValue((pr) => pr.slice(0, pr.length - 1));
